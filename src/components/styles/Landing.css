@@ -3,7 +3,7 @@
   display: none;
 }
 
-/* Remove mobile photo and ensure 3D character is always hidden on mobile */
+/* Ensure 3D character is hidden on mobile & proper flex order */
 @media only screen and (max-width: 768px) {
   .character-model {
     display: none !important;
@@ -19,6 +19,7 @@
     flex-direction: column;
     padding: 0 15px;
     padding-bottom: 40px;
+    overflow-x: hidden;
   }
 
   /* Fix spacing between name and subtitle */
@@ -30,34 +31,28 @@
     bottom: auto !important;
     transform: none !important;
     padding-top: 40px;
-    /* Shift higher up */
     margin-bottom: 20px;
-    z-index: 10;
+    z-index: 25;
     text-align: center;
     width: 100% !important;
     order: 1;
-    /* First: Name */
     height: auto !important;
   }
 
   .landing-intro h1 {
     word-spacing: 0.1em;
-    font-size: 32px !important;
-    /* Ensure nice size */
+    font-size: clamp(26px, 7vw, 34px) !important;
     line-height: 1.2 !important;
     margin: 0;
   }
 
-  /* Ensure name parts display correctly */
   .landing-intro h1 br {
     display: block;
-    /* Keep break on mobile for 2 lines, or use display:none for 1 line */
     content: " ";
-    /* Fallback */
     margin-bottom: 5px;
   }
 
-  /* Subtitles Container */
+  /* Subtitles Container on Mobile */
   .landing-info {
     position: relative !important;
     top: auto !important;
@@ -66,61 +61,53 @@
     bottom: auto !important;
     transform: none !important;
     text-align: center;
-    margin-top: 20px;
-    /* Space between name and subtitles */
-    z-index: 10;
+    margin-top: 15px;
+    z-index: 25;
     background: transparent;
-    padding-bottom: 50px;
-    /* Add bottom padding for scroll space */
+    padding-bottom: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 6px;
     height: auto !important;
-    /* Force auto height */
     width: 100% !important;
+    max-width: 100% !important;
     order: 3;
-    /* Third: Subtitles */
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .landing-info h3 {
     text-align: center;
-    display: none;
-    /* Hide 'An' if not needed, or keep it static */
-  }
-
-  /* Force static positioning to prevent overlaps */
-  .landing-info h2,
-  h2.landing-info-h2,
-  .landing-h2-1,
-  .landing-h2-info {
-    position: static !important;
-    display: block;
-    width: auto;
-    margin: 0 !important;
-    font-size: 20px !important;
-    line-height: 1.5 !important;
-    white-space: normal;
-    text-align: center;
-    height: auto !important;
-    transform: none !important;
-    /* Remove any transforms */
-  }
-
-  /* Specific styling for the distinct parts */
-  .landing-h2-1 {
-    font-size: 24px !important;
+    display: block !important;
+    font-size: 15px !important;
+    letter-spacing: 2px;
     color: var(--accentColor);
-    font-weight: 700;
+    margin: 0;
   }
 
-  .landing-h2-info {
-    font-size: 18px !important;
-    color: rgba(255, 255, 255, 0.9);
+  .landing-role-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 55px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
   }
 
-  .landing-info-h2::after {
-    display: none;
+  .landing-role-text {
+    font-size: clamp(20px, 5.5vw, 26px) !important;
+    line-height: 1.2 !important;
+    letter-spacing: 1.5px !important;
+    text-align: center !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    max-width: 100% !important;
+    color: #c481ff !important;
+    font-weight: 700 !important;
+    margin: 0 !important;
   }
 
   /* Show mobile photo */
@@ -128,12 +115,10 @@
     display: block;
     position: relative !important;
     width: 100%;
-    max-width: 380px;
+    max-width: 340px;
     margin: 0 auto;
     z-index: 1;
     order: 2;
-    /* Second: Photo */
-    /* Add fade mask to bottom */
     -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
     mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
     pointer-events: none;
@@ -154,6 +139,7 @@
   margin: auto;
   position: relative;
   height: var(--vh);
+  overflow: hidden;
 }
 
 .landing-container {
@@ -162,6 +148,7 @@
   height: 100%;
   position: relative;
   max-width: var(--cMaxWidth);
+  box-sizing: border-box;
 }
 
 .landing-circle1 {
@@ -176,6 +163,7 @@
   filter: blur(60px);
   border-radius: 50%;
   animation: loadingCircle 5s linear infinite;
+  pointer-events: none;
 }
 
 .nav-fade {
@@ -216,6 +204,7 @@
   filter: blur(50px);
   border-radius: 50%;
   animation: loadingCircle2 5s linear infinite;
+  pointer-events: none;
 }
 
 @keyframes loadingCircle2 {
@@ -256,7 +245,6 @@
 }
 
 .character-model {
-  height: 80%;
   height: 80vh;
   position: absolute;
   max-width: 1920px;
@@ -318,9 +306,10 @@
   border-radius: 50%;
 }
 
+/* Default / Tablet Intro */
 .landing-intro {
   position: absolute;
-  z-index: 9;
+  z-index: 25;
   top: 5%;
   left: 0;
 }
@@ -342,81 +331,57 @@
   font-family: "Geist", sans-serif;
 }
 
-/* .landing-intro h1 span {
-   font-weight: 200; 
-} */
-
+/* Default / Tablet Subtitles & Rotating Role Container */
 .landing-info {
   position: absolute;
   right: 50%;
   transform: translateX(50%);
-  bottom: 40px;
-  top: inherit;
-  z-index: 9;
+  bottom: 35px;
+  z-index: 25;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  max-width: 520px;
+  box-sizing: border-box;
 }
 
 .landing-info h3 {
-  font-size: 22px;
+  font-size: clamp(16px, 1.8vw, 22px);
   letter-spacing: 2px;
   font-weight: 300;
   color: var(--accentColor);
-  margin: 0;
-}
-
-.landing-info h2 {
-  margin: 0;
-  margin-top: -20px;
-  margin-left: 20px;
-  font-family: "Geist", sans-serif;
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 40px;
-  position: relative;
-  display: flex;
-  flex-wrap: nowrap;
+  margin: 0 0 6px 0;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  white-space: nowrap;
 }
 
-.landing-h2-info {
-  white-space: nowrap;
+.landing-role-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 65px;
+  box-sizing: border-box;
+  padding: 4px 0;
 }
 
-.landing-h2-info-1 {
-  position: absolute;
-  top: 0;
-  white-space: nowrap;
-}
-
-h2.landing-info-h2 {
-  color: #c481ff;
-  font-size: 36px;
-  width: 150%;
+.landing-role-text {
   margin: 0;
   font-family: "Geist", sans-serif;
-  font-weight: 600;
-  position: relative;
-  margin-left: -5px;
-}
-
-.landing-h2-2 {
-  position: absolute;
-  top: 0;
-  white-space: nowrap;
-}
-
-.landing-info-h2::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 120%;
-  z-index: 3;
-  background-image: linear-gradient(0deg,
-      var(--backgroundColor) 40%,
-      rgba(0, 0, 0, 0) 110%);
-  top: 0;
-  left: 0;
+  font-weight: 700;
+  font-size: clamp(22px, 3.2vw, 42px);
+  line-height: 1.18;
+  color: #c481ff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-align: center;
+  word-break: break-word;
+  max-width: 100%;
+  display: inline-block;
+  will-change: transform, opacity, filter;
 }
 
 @media screen and (min-width: 500px) {
@@ -428,10 +393,6 @@ h2.landing-info-h2 {
     z-index: 0;
   }
 
-  .landing-info h3 {
-    font-size: 18px;
-  }
-
   .landing-intro h2 {
     font-size: 18px;
   }
@@ -441,13 +402,8 @@ h2.landing-info-h2 {
     line-height: 30px;
   }
 
-  .landing-info h2 {
-    font-size: 35px;
-    line-height: 40px;
-  }
-
-  h2.landing-info-h2 {
-    font-size: 38px;
+  .landing-role-text {
+    font-size: clamp(24px, 3.5vw, 42px);
   }
 }
 
@@ -457,28 +413,33 @@ h2.landing-info-h2 {
   }
 
   .landing-intro h2 {
-    font-size: 25px;
+    font-size: 24px;
   }
 
   .landing-intro h1 {
-    font-size: 40px;
-    line-height: 35px;
+    font-size: 38px;
+    line-height: 36px;
+  }
+
+  .landing-info {
+    bottom: 40px;
+    max-width: 560px;
   }
 
   .landing-info h3 {
-    font-size: 25px;
+    font-size: 22px;
   }
 
-  .landing-info h2 {
-    font-size: 45px;
-    line-height: 42px;
+  .landing-role-container {
+    min-height: 75px;
   }
 
-  h2.landing-info-h2 {
-    font-size: 55px;
+  .landing-role-text {
+    font-size: clamp(26px, 3.5vw, 44px);
   }
 }
 
+/* Desktop layout: 3D character in center, Name on Left, Rotating Role on Right */
 @media screen and (min-width: 1025px) {
   .character-model {
     height: 100vh;
@@ -492,63 +453,116 @@ h2.landing-info-h2 {
     display: none;
   }
 
+  /* Left-side intro with generous clearance from center 3D character */
   .landing-intro {
     top: 40%;
-    left: auto;
-    right: 66%;
-    transform: translate(0%, -50%);
-  }
-
-  .landing-info {
-    bottom: auto;
-    top: 51%;
-    z-index: inherit;
-    text-align: left;
-    transform: translate(0%, -50%);
+    left: 4%;
     right: auto;
-    left: 66%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .landing-intro {
-    top: 40%;
-    left: auto;
-    right: 70%;
-    transform: translate(0%, -50%);
-  }
-
-  .landing-info {
-    bottom: auto;
-    top: 51%;
-    z-index: inherit;
+    transform: translateY(-50%);
+    max-width: 27vw;
     text-align: left;
-    transform: translate(0%, -50%);
-    right: auto;
-    left: 70%;
+    z-index: 25;
   }
-}
 
-@media screen and (min-width: 1600px) {
   .landing-intro h2 {
-    font-size: 35px;
+    font-size: 22px;
   }
 
   .landing-intro h1 {
-    font-size: 60px;
-    line-height: 55px;
+    font-size: clamp(28px, 2.7vw, 44px);
+    line-height: 1.15;
+  }
+
+  /* Right-side role text starting at 68% for complete clearance from character ears */
+  .landing-info {
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 68%;
+    right: 25px;
+    width: auto;
+    max-width: calc(32vw - 25px);
+    align-items: flex-start;
+    text-align: left;
+    padding-right: 15px;
+    z-index: 25;
   }
 
   .landing-info h3 {
-    font-size: 35px;
+    text-align: left;
+    font-size: 20px;
   }
 
-  .landing-info h2 {
-    font-size: 65px;
-    line-height: 62px;
+  .landing-role-container {
+    justify-content: flex-start;
+    min-height: 80px;
   }
 
-  h2.landing-info-h2 {
-    font-size: 75px;
+  .landing-role-text {
+    text-align: left;
+    font-size: clamp(22px, 2.1vw, 36px);
+    line-height: 1.2;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .landing-intro {
+    left: 5%;
+    top: 40%;
+    max-width: 27vw;
+  }
+
+  .landing-intro h1 {
+    font-size: clamp(34px, 2.5vw, 46px);
+  }
+
+  .landing-info {
+    left: 69%;
+    top: 50%;
+    right: 35px;
+    max-width: calc(31vw - 35px);
+  }
+
+  .landing-info h3 {
+    font-size: 22px;
+  }
+
+  .landing-role-container {
+    min-height: 90px;
+  }
+
+  .landing-role-text {
+    font-size: clamp(24px, 2.2vw, 40px);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .landing-intro {
+    left: 7%;
+    max-width: 460px;
+  }
+
+  .landing-intro h1 {
+    font-size: 46px;
+    line-height: 1.15;
+  }
+
+  .landing-info {
+    left: 70%;
+    right: 50px;
+    max-width: 480px;
+  }
+
+  .landing-info h3 {
+    font-size: 24px;
+  }
+
+  .landing-role-container {
+    min-height: 100px;
+  }
+
+  .landing-role-text {
+    font-size: 42px;
+    line-height: 1.2;
   }
 }

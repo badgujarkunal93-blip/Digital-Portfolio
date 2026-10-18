@@ -1,192 +1,199 @@
 export const config = {
     developer: {
-        name: "Redoyanul",
-        fullName: "Redoyanul Haque",
-        title: "AI & Full-Stack Developer",
-        description: "AI & Full-Stack Developer building intelligent systems and modern web applications. Passionate about machine learning, deep learning, and creating next-gen autonomous agents."
+        name: "Kunal",
+        fullName: "Kunal Badgujar",
+        legalName: "Kunal Sharad Badgujar",
+        title: "AI/ML Engineer | Applied AI Builder | Open-Source Contributor",
+        description: "B.Tech AI & ML undergraduate who ships end-to-end products, from React and Next.js interfaces to FastAPI and Firebase backends, powered by LLM APIs, RAG pipelines, and computer vision."
     },
     social: {
-        github: "red1-for-hek",
-        email: "redoyanul1234@gmail.com",
-        location: "Bangladesh"
+        github: "badgujarkunal93-blip",
+        email: "badgujarkunal93@gmail.com",
+        location: "Pune, Maharashtra, India",
+        phone: "+91 93256 37568",
+        education: "B.Tech, Computer Science & Engineering (AI & ML), MIT Academy of Engineering, Alandi, Pune (2025-2029)"
     },
     about: {
         title: "About Me",
-        description: "I am a self-taught AI & Full-Stack Developer from Bangladesh. I build intelligent systems, chatbots, and modern web applications. My expertise includes Machine Learning, Deep Learning, NLP, and Full-Stack Web Development with React, Node.js, and Python. Currently building next-gen AI Agents and JARVIS-like Personal Assistants. I have a competitive programming mindset and a deep passion for automation. Code is poetry, AI is the canvas."
+        description: "B.Tech AI & ML undergraduate who ships end-to-end products, from React and Next.js interfaces to FastAPI and Firebase backends, powered by LLM APIs, RAG pipelines, and computer vision. Open-source contributor at Vicharanashala, IIT Ropar, with 8 live, deployed projects across education, productivity, fitness, and spatial computing."
     },
     experiences: [
         {
-            position: "Learning Something New",
-            company: "Self-Development",
+            position: "Open-Source Developer",
+            company: "OBLIQ",
             period: "2025 - Present",
-            location: "Bangladesh",
-            description: "Continuously exploring emerging technologies, researching advanced AI systems, and pushing the boundaries of what's possible in tech.",
+            location: "Remote",
+            description: "Contributing to OBLIQ's website project through the organization's public GitHub repositories. Working in a collaborative pull-request workflow.",
             responsibilities: [
-                "Researching cutting-edge AI and ML technologies",
-                "Experimenting with new frameworks and tools",
-                "Contributing to open-source projects",
-                "Building innovative personal projects"
+                "Contributing to OBLIQ's website project through the organization's public GitHub repositories",
+                "Working in a collaborative pull-request workflow"
             ],
-            technologies: ["Research", "Innovation", "Open Source", "New Tech"]
+            technologies: ["React", "TypeScript", "Tailwind CSS", "Git", "GitHub PR Workflow"]
         },
         {
-            position: "AI Engineer",
-            company: "Freelance & Projects",
-            period: "2025",
-            location: "Bangladesh",
-            description: "Developing intelligent AI systems, chatbots, and machine learning solutions. Building next-gen conversational AI agents and JARVIS-like personal assistants.",
+            position: "Open-Source & AI Development Intern (Remote)",
+            company: "Vicharanashala, IIT Ropar",
+            period: "May 2026 - Jul 2026",
+            location: "Remote, India",
+            description: "Contributed to open-source learning and community platforms, including Tenali (a mathematics quiz platform) and crowd-source-faq. Built interactive Bayes' Theorem and Normal Distribution learning modules using the MiniMax API, plus an animated Tenali Raman mascot system with multiple emotion states. Designed and submitted Yaksha AI, a FAQ portal concept with a 3D knowledge graph, a Groq-powered RAG chatbot, and participation-focused gamification.",
             responsibilities: [
-                "Building AI-powered chatbots and conversational agents",
-                "Developing machine learning models with TensorFlow and PyTorch",
-                "Working with LLMs and transformer architectures",
-                "Creating autonomous AI systems and automation tools"
+                "Contributed to open-source learning and community platforms, including Tenali and crowd-source-faq",
+                "Built interactive Bayes' Theorem and Normal Distribution learning modules using the MiniMax API, plus an animated Tenali Raman mascot system with multiple emotion states",
+                "Designed and submitted Yaksha AI, a FAQ portal concept with a 3D knowledge graph, a Groq-powered RAG chatbot, and participation-focused gamification"
             ],
-            technologies: ["Python", "TensorFlow", "PyTorch", "LLMs", "NLP", "AI Agents"]
+            technologies: ["MiniMax API", "Groq", "RAG", "Knowledge Graphs", "Next.js", "AI Agents", "Python"]
         },
         {
-            position: "Full-Stack Developer",
-            company: "Freelance & Projects",
-            period: "2024",
-            location: "Bangladesh",
-            description: "Built complete web applications from frontend to backend. Developed responsive UIs, RESTful APIs, and database solutions for various clients and projects.",
+            position: "Intern",
+            company: "IBM",
+            period: "2026",
+            location: "India",
+            description: "Completed an IBM internship program.",
             responsibilities: [
-                "Developing full-stack web applications using React and Node.js",
-                "Building RESTful APIs and integrating databases",
-                "Creating responsive and interactive user interfaces",
-                "Deploying and maintaining web applications"
+                "Completed an IBM internship program"
             ],
-            technologies: ["React", "Node.js", "MongoDB", "Express", "Next.js", "TypeScript"]
-        },
-        {
-            position: "Python Developer",
-            company: "Self-Taught & Projects",
-            period: "2023",
-            location: "Bangladesh",
-            description: "Dove deep into Python programming, building automation scripts, bots, and mastering the fundamentals of software development and problem-solving.",
-            responsibilities: [
-                "Learning Python programming and core concepts",
-                "Building automation scripts and Discord bots",
-                "Exploring data structures and algorithms",
-                "Participating in competitive programming"
-            ],
-            technologies: ["Python", "Automation", "Scripting", "Discord.py", "Problem Solving"]
-        },
-        {
-            position: "Graphic Designer",
-            company: "Freelance",
-            period: "2022",
-            location: "Bangladesh",
-            description: "Started my creative journey as a graphic designer, creating logos, banners, and visual content. This sparked my passion for technology and digital creation.",
-            responsibilities: [
-                "Designing logos and brand identity materials",
-                "Creating social media graphics and banners",
-                "Working with clients on creative projects",
-                "Learning design principles and visual aesthetics"
-            ],
-            technologies: ["Photoshop", "Illustrator", "Canva", "Figma", "Visual Design"]
-        },
-        {
-            position: "Microsoft Office",
-            company: "Begin Learning",
-            period: "2021",
-            location: "Bangladesh",
-            description: "Started my journey into the digital world by learning Microsoft Office tools. This foundational step introduced me to computers and sparked my curiosity for technology.",
-            responsibilities: [
-                "Learning Microsoft Word, Excel, and PowerPoint",
-                "Creating documents and presentations",
-                "Understanding basic computer operations",
-                "Building foundational digital skills"
-            ],
-            technologies: ["MS Word", "MS Excel", "MS PowerPoint", "Computer Basics"]
+            technologies: ["AI", "Python", "Enterprise Software"]
         }
     ],
     projects: [
         {
             id: 1,
-            title: "Drishti",
-            category: "AI / LLM",
-            technologies: "Python, PyTorch, Transformers, FastAPI, React, MongoDB",
-            image: "/images/Drishti.png",
-            description: "Bangladesh's first intelligent advanced AI chatbot powered by a custom Large Language Model. Features natural language understanding, contextual conversations, and multilingual support including Bengali.",
-            link: "https://huggingface.co/red1-for-hek/drishti-ilm-x1"
+            title: "Optima AI",
+            category: "AI / Code Intelligence",
+            technologies: "Next.js, React, TypeScript, Groq, Piston",
+            image: "/projects/optima-ai.webp",
+            description: "AI-assisted code improvement and refactoring, with code execution and performance comparison capabilities where implemented.",
+            link: "https://sml-code-optimiser.vercel.app/",
+            github: "https://github.com/badgujarkunal93-blip/SML-Code-Optimiser"
         },
         {
             id: 2,
-            title: "VoteChain",
-            category: "Blockchain",
-            technologies: "Solidity, Web3.js, React, Ethereum, IPFS, MetaMask, Node.js",
-            image: "/images/VoteChain.png",
-            description: "A decentralized election system built on blockchain technology ensuring transparent, tamper-proof, and verifiable voting. Features smart contracts for vote integrity and real-time result tracking.",
-            link: "https://github.com/red1-for-hek/smart-election-by-blockchain"
+            title: "ARQuest",
+            category: "AI / Computer Vision",
+            technologies: "React, Tailwind CSS, Supabase, MediaPipe",
+            image: "/projects/arquest.webp",
+            description: "A gamified habit and fitness experience with quests, progress tracking and camera-based pose tracking where implemented.",
+            link: "https://ar-quest-ashen.vercel.app/",
+            github: "https://github.com/badgujarkunal93-blip/ARQuest"
+        },
+        {
+            id: 3,
+            title: "Saras AI",
+            category: "AI / EdTech",
+            technologies: "Next.js, Tailwind CSS, Groq, Prisma, React",
+            image: "/projects/saras-ai.webp",
+            description: "An AI-assisted learning workspace designed around educational video content, topic checkpoints, quizzes, flashcards and active recall.",
+            link: "https://saras-ai-tan.vercel.app/",
+            github: "https://github.com/badgujarkunal93-blip/Saras-AI"
         },
         {
             id: 4,
-            title: "Flood Spaces 2.0",
-            category: "AI / ML",
-            technologies: "Python, TensorFlow, Pandas, React, FastAPI, GIS",
-            image: "/images/FloodSpaces.png",
-            description: "Predicts flood risks across Bangladesh up to one month in advance and sends early alerts to help people prepare.",
-            link: "https://github.com/red1-for-hek/Flood-Spaces-2.0"
+            title: "EduCore",
+            category: "Productivity / Full-Stack",
+            technologies: "React, Vite, Tailwind CSS, Firebase",
+            image: "/projects/educore.webp",
+            description: "A collaboration workspace for organizing projects, managing tasks and coordinating team progress.",
+            link: "https://edu-core-blush.vercel.app/",
+            github: ""
         },
         {
             id: 5,
-            title: "Phoenix 3.0",
-            category: "AI Assistant",
-            technologies: "Python, Speech Recognition, PyAutoGUI, OpenAI API, Tkinter",
-            image: "/images/Phoenix3.0.png",
-            description: "A JARVIS-inspired personal AI desktop assistant. Controls system functions, manages tasks, answers queries, automates workflows, and provides voice-activated computing experience.",
-            link: "https://github.com/red1-for-hek/phoenix3.0"
+            title: "Ascend",
+            category: "Developer Tools / EdTech",
+            technologies: "React, Firebase, Monaco Editor, Piston",
+            image: "/projects/ascend.webp",
+            description: "A coding practice platform with an in-browser code editor and code execution workflow, where implemented.",
+            link: "https://ascend-alpha-six.vercel.app/",
+            github: ""
         },
         {
             id: 6,
-            title: "RedxChess",
-            category: "AI / Game Engine",
-            technologies: "Python, C++, Neural Networks, Bitboards, UCI Protocol",
-            image: "/images/RedxChess.png",
-            description: "A high-performance chess engine rated 3640 ELO. Features advanced search algorithms, neural network evaluation, and optimized bitboard representation for lightning-fast move generation.",
-            link: "/play"
+            title: "PivotVault",
+            category: "AI / Startup Intelligence",
+            technologies: "React, Vite, Tailwind CSS, Framer Motion, GSAP",
+            image: "/projects/pivotvault.webp",
+            description: "An AI-assisted startup intelligence concept that uses lessons from startup post-mortems to surface potentially relevant risks and patterns.",
+            link: "https://pivotvault-forked.vercel.app/",
+            github: ""
         },
         {
             id: 7,
-            title: "Prodesk",
-            category: "E-commerce",
-            technologies: "React, Node.js, MongoDB, Express, Stripe",
-            image: "/images/Prodesk.png",
-            description: "A complete e-commerce platform with secure checkout and smooth product browsing.",
-            link: "https://github.com/red1-for-hek/prodesk"
+            title: "PathForge AI",
+            category: "AI / Visualization",
+            technologies: "React, Vite, Tailwind CSS, Three.js",
+            image: "/projects/pathforge-ai.webp",
+            description: "A path-planning and visualization project for exploring routes and spatial relationships.",
+            link: "https://path-forge-ai-dun.vercel.app/",
+            github: "https://github.com/badgujarkunal93-blip/PathForge-AI"
         },
         {
             id: 8,
-            title: "HekTools",
-            category: "Security / Android",
-            technologies: "Kotlin, Android SDK, Firebase, Python, Encryption",
-            image: "/images/hektools.png",
-            description: "An advanced Android monitoring and security research tool. Features remote device management, activity logging, and encrypted data transmission for security testing purposes.",
-            link: ""
+            title: "Locentra",
+            category: "Spatial Computing / Research",
+            technologies: "React, TypeScript, Three.js, Python, FastAPI, NumPy, SciPy",
+            image: "/projects/locentra.webp",
+            description: "An indoor-positioning research visualization for exploring anchor placement, estimated trajectories and positioning accuracy.",
+            link: "https://locentra-olive.vercel.app/",
+            github: "https://github.com/badgujarkunal93-blip/Locentra",
+            docs: "https://github.com/badgujarkunal93-blip/Locentra/blob/main/backend/README.md"
         }
     ],
+    certifications: [
+        "Build an AI Agent",
+        "AI Fluency: Framework & Foundations",
+        "Claude 101",
+        "Python Essentials",
+        "Data Analytics Essentials",
+        "Introduction to Modern AI"
+    ],
     contact: {
-        email: "redoyanul1234@gmail.com",
-        github: "https://github.com/red1-for-hek",
-        linkedin: "https://linkedin.com/in/red1-for-hek",
-        twitter: "https://x.com/red_1_ul",
-        facebook: "https://www.facebook.com/redoyanulhaque.hacker.official",
-        instagram: "https://www.instagram.com/red_1_ul"
+        email: "badgujarkunal93@gmail.com",
+        phone: "+91 93256 37568",
+        github: "https://github.com/badgujarkunal93-blip",
+        linkedin: "https://linkedin.com/in/kunal-badgujar-264b98382"
     },
     skills: {
         develop: {
-            title: "AI DEVELOPER",
-            description: "Building intelligent systems & AI solutions",
-            details: "Developing AI agents, chatbots, and machine learning models using Python, TensorFlow, and PyTorch. Specializing in LLMs, NLP, deep learning, and autonomous systems.",
-            tools: ["Python", "TensorFlow", "PyTorch", "OpenCV", "Scikit-learn", "LLMs", "NLP", "Deep Learning", "Chatbots", "AI Agents"]
+            title: "AI / ML & BACKEND",
+            description: "LLMs, RAG Pipelines & High-Performance APIs",
+            details: "Specializing in Groq, Gemini, MiniMax, RAG systems, prompt engineering, AI agents, MediaPipe computer vision, Python, FastAPI, Node.js, Express, and Prisma ORM.",
+            tools: [
+                "Python",
+                "FastAPI",
+                "Groq",
+                "Gemini",
+                "MiniMax",
+                "RAG",
+                "AI Agents",
+                "MediaPipe",
+                "Node.js",
+                "Express",
+                "Prisma ORM",
+                "PostgreSQL",
+                "Firebase",
+                "Supabase"
+            ]
         },
         design: {
-            title: "FULL-STACK",
-            description: "Modern web development & scalable applications",
-            details: "Building responsive and performant web applications using React, Next.js, Node.js, and databases. Creating seamless user experiences with modern UI/UX principles.",
-            tools: ["React", "Next.js", "Node.js", "TypeScript", "MongoDB", "PostgreSQL", "TailwindCSS", "REST APIs", "Docker", "Git"]
+            title: "FRONTEND & SYSTEMS",
+            description: "Interactive Web Applications & 3D Spatial Experiences",
+            details: "Building responsive, high-performance web products with React, Next.js, Vite, TypeScript, Tailwind CSS, Three.js, Monaco Editor, and Piston sandboxing.",
+            tools: [
+                "React",
+                "Next.js",
+                "TypeScript",
+                "JavaScript",
+                "Three.js",
+                "Tailwind CSS",
+                "Vite",
+                "C++",
+                "C",
+                "SQL",
+                "Monaco Editor",
+                "Piston Sandbox",
+                "Git & GitHub",
+                "Linux"
+            ]
         }
     }
 };
-
-

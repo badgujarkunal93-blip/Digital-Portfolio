@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import "./App.css";
@@ -12,7 +12,7 @@ import { LoadingProvider } from "./context/LoadingProvider";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route
           path="/"
@@ -47,7 +47,7 @@ const App = () => {
       </Routes>
       <Analytics />
       <SpeedInsights />
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 

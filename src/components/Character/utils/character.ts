@@ -9,15 +9,16 @@ const setCharacter = (
   camera: THREE.PerspectiveCamera
 ) => {
   const loader = new GLTFLoader();
+  const baseUrl = import.meta.env.BASE_URL;
   const dracoLoader = new DRACOLoader();
-  dracoLoader.setDecoderPath("/draco/");
+  dracoLoader.setDecoderPath(`${baseUrl}draco/`);
   loader.setDRACOLoader(dracoLoader);
 
   const loadCharacter = () => {
     return new Promise<GLTF | null>(async (resolve, reject) => {
       try {
         const encryptedBlob = await decryptFile(
-          "/models/character.enc",
+          `${baseUrl}models/character.enc`,
           "Character3D#@"
         );
         const blobUrl = URL.createObjectURL(new Blob([encryptedBlob]));
@@ -29,6 +30,15 @@ const setCharacter = (
             character = gltf.scene;
             await renderer.compileAsync(character, camera, scene);
             character.traverse((child: any) => {
+              // Hide the untextured, z-fighting disc mesh on the desk surface
+              if (
+                child.name === "Plane003" ||
+                child.name === "Plane.003" ||
+                (child.name && child.name.includes("Plane") && child.name.includes("003"))
+              ) {
+                child.visible = false;
+              }
+
               if (child.isMesh) {
                 const mesh = child as THREE.Mesh;
                 child.castShadow = false;
