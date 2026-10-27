@@ -28,17 +28,6 @@
   box-shadow: 0 0 6px rgba(255, 255, 255, 0.9);
 }
 
-.cursor-icons {
-  top: 10px;
-  left: 10px;
-  height: calc(var(--cursorH) - 20px);
-  width: 50px;
-  border-radius: 12px;
-  border-color: rgba(232, 121, 249, 0.85);
-  background: rgba(232, 121, 249, 0.2);
-  transition: all 0.4s ease-out;
-}
-
 .cursor-disable {
   opacity: 0 !important;
   transform: scale(0.3);

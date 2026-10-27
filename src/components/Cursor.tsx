@@ -60,22 +60,14 @@ const Cursor = () => {
     const dataCursorElements = document.querySelectorAll("[data-cursor]");
     const handleMouseOver = (e: Event) => {
       const target = e.currentTarget as HTMLElement;
-      const rect = target.getBoundingClientRect();
 
-      if (target.dataset.cursor === "icons") {
-        cursor.classList.add("cursor-icons");
-        gsap.to(cursor, { x: rect.left, y: rect.top, duration: 0.1 });
-        cursor.style.setProperty("--cursorH", `${rect.height}px`);
-        hover = true;
-      }
       if (target.dataset.cursor === "disable") {
         cursor.classList.add("cursor-disable");
       }
     };
 
     const handleMouseOut = () => {
-      cursor.classList.remove("cursor-disable", "cursor-icons");
-      hover = false;
+      cursor.classList.remove("cursor-disable");
     };
 
     dataCursorElements.forEach((item) => {

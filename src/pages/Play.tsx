@@ -75,7 +75,7 @@ Contact & Social Links:
 - Email: badgujarkunal93@gmail.com
 - Phone: +91 93256 37568
 - GitHub: https://github.com/badgujarkunal93-blip
-- LinkedIn: https://linkedin.com/in/kunal-badgujar-264b98382
+- LinkedIn: https://www.linkedin.com/in/kunal-badgujar-264b98382/
 
 Conversation rules:
 1. Answer directly, warmly, and concisely; dive deeper into code, architecture, or model design when asked.

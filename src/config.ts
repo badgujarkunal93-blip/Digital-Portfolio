@@ -150,7 +150,7 @@ export const config = {
         email: "badgujarkunal93@gmail.com",
         phone: "+91 93256 37568",
         github: "https://github.com/badgujarkunal93-blip",
-        linkedin: "https://linkedin.com/in/kunal-badgujar-264b98382"
+        linkedin: "https://www.linkedin.com/in/kunal-badgujar-264b98382/"
     },
     skills: {
         develop: {
